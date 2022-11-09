@@ -17,7 +17,7 @@ const GetPlugins = () => {
                 }),
                 new CleanWebpackPlugin(),
                 new MiniCssExtractPlugin({
-                    filename: isProd ? '[name].css' : '[name].[hash].css',
+                    filename: isProd ? 'assets/css/styles.css' : '[name].[hash].css',
                 }),
             ];
 
@@ -43,7 +43,7 @@ module.exports = {
         entry: path.resolve(__dirname, 'src', 'index.js'),
         output: {
             path: path.resolve(__dirname, 'dist'),
-            filename: isProd ? 'boundle.js' : 'boundle.[hash].js',
+            filename: isProd ? 'assets/js/boundle.js' : 'assets/js/boundle.[hash].js',
            // assetModuleFilename: 'assets/[name][ext]'
         },
         devtool,
@@ -52,97 +52,97 @@ module.exports = {
             hot: isDev
         },
         plugins: GetPlugins(),
-    module: {
-        rules: [
-            {
-                test: /\.html$/i,
-                loader: 'html-loader',
-            },
-            {
-                test: /\.css$/i,
-                use: [ isDev ?  "style-loader" : {
-                    loader: MiniCssExtractPlugin.loader,
-                    options: {
-                        hmr: isDev,
-                        reloadAll: true,
-                    },
-                }
-                    , "css-loader"],
-            },
-            {
-                test: /\.s[ac]ss$/,
-                use: [
-                    isDev ?  "style-loader" : MiniCssExtractPlugin.loader, 
-                    "css-loader", 
-                    {
-                        loader: 'postcss-loader',
+        module: {
+            rules: [
+                {
+                    test: /\.html$/i,
+                    loader: 'html-loader',
+                },
+                {
+                    test: /\.css$/i,
+                    use: [ isDev ?  "style-loader" : {
+                        loader: MiniCssExtractPlugin.loader,
                         options: {
-                            postcssOptions:  {
-                                plugins: ['autoprefixer'],
+                            hmr: isDev,
+                            reloadAll: true,
+                        },
+                    }
+                        , "css-loader"],
+                },
+                {
+                    test: /\.s[ac]ss$/,
+                    use: [
+                        isDev ?  "style-loader" : MiniCssExtractPlugin.loader, 
+                        "css-loader", 
+                        {
+                            loader: 'postcss-loader',
+                            options: {
+                                postcssOptions:  {
+                                    plugins: ['autoprefixer'],
+                                }
+                            }
+                        }, 
+                        'sass-loader'],
+                },
+                {
+                    test: /\.m?js$/,
+                    exclude: /(node_modules|bower_components)/,
+                    use: {
+                    loader: 'babel-loader',
+                    options: {
+                        presets: [
+                            ['@babel/preset-env', {
+                                debug: isDev,
+                            }]
+                        ]
+                    }
+                    },
+                },
+                {
+                    test: /\.woff2?$/i,
+                    type: 'asset/resource',
+                    generator: {
+                        filename: 'assets/fonts/[name][ext]'
+                    }
+                },
+                {
+                    test: /\.(png|jpg|svg|gif|ico|jpeg)?$/i,
+                    use: [
+                        {
+                            loader: 'image-webpack-loader',
+                            options: {
+                                mozjpeg: {
+                                progressive: true,
+                                },
+                                optipng: {
+                                enabled: false,
+                                },
+                                pngquant: {
+                                quality: [0.65, 0.90],
+                                speed: 4
+                                },
+                                gifsicle: {
+                                interlaced: false,
+                                },
+                                webp: {
+                                quality: 75
+                                }
                             }
                         }
-                    }, 
-                    'sass-loader'],
-            },
-            {
-                test: /\.m?js$/,
-                exclude: /(node_modules|bower_components)/,
-                use: {
-                loader: 'babel-loader',
-                options: {
-                    presets: [
-                        ['@babel/preset-env', {
-                            debug: isDev,
-                        }]
-                    ]
-                }
-                },
-            },
-            {
-                test: /\.woff2?$/i,
-                type: 'asset/resource',
-                generator: {
-                  filename: 'assets/fonts/[name][ext]'
-                }
-            },
-            {
-                test: /\.(png|jpg|svg|gif|ico|jpeg)?$/i,
-                use: [
-                    {
-                        loader: 'image-webpack-loader',
-                        options: {
-                            mozjpeg: {
-                              progressive: true,
-                            },
-                            optipng: {
-                              enabled: false,
-                            },
-                            pngquant: {
-                              quality: [0.65, 0.90],
-                              speed: 4
-                            },
-                            gifsicle: {
-                              interlaced: false,
-                            },
-                            webp: {
-                              quality: 75
-                            }
-                          }
+                    ],
+                    type: 'asset/resource',
+                    generator: {
+                    filename: 'assets/img/[name][ext]'
                     }
-                ],
-                type: 'asset/resource',
-                generator: {
-                  filename: 'assets/img/[name][ext]'
-                }
-            },
-            // {
-            //     test: /\.jpg$/i,
-            //     type: 'asset/resource',
-            //     generator: {
-            //       filename: 'assets/webp/[name][ext]'
-            //     }
-            // },
+                },
+                // {
+                //     test: /\.jpg$/i,
+                //     type: 'asset/resource',
+                //     generator: {
+                //       filename: 'assets/webp/[name][ext]'
+                //     }
+                // },
 
-        ]
-    }
+            ]
+        }
 }

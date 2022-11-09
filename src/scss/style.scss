@@ -373,5 +373,75 @@ html {
         }
  }
 
+ .booking-section {
+    background-color: $color-middle;
+        &__inner{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            min-height: 845px;
+        }
+        &__accordion {
+            padding: 105px 60px 105px 0;
+        }
+        &__bg {
+            position: relative;
+            position: relative;
+            height: 100%;
+        }
+        &__images {
+            max-width: none;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            object-fit: cover;
+        }
+ }
+
+ .accordion {
+    padding-top: 20px;
+    &__item {
+        padding: 30px;
+        border: 2px solid $color-light;
+        margin-top: 20px;
+        transition: .3s;
+        &.active {
+            border: 2px solid #fff;
+        }
+    }
+    &__head {
+        display:flex;
+        justify-content: space-between;
+    }
+    &__title {
+        font-size: 3.2rem;
+        font-weight: 600;
+    }
+    &__content {
+        display: none;
+        margin-top: 15px;
+        > * {
+            font-weight: 400;
+            font-size: 2.0rem;
+            line-height: 130%;
+            color: $font-color-light;
+            padding-bottom: 10px;
+        }
+    }
+    &__button{
+        width: 40px;
+        height: 40px;
+        background: url(../img/open.svg) no-repeat center center;
+        cursor: pointer;  
+            &.opened {
+                transform: rotate(45deg);
+            }
+    }
+ }
+
+
+
+
+
 // @media (min-width: 1920px) {
 // }
