@@ -18,7 +18,7 @@ html {
 }
 
 .header {
-    .header__inner {
+    &__inner {
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -35,7 +35,7 @@ html {
 .mainmenu{
     display: flex;
     justify-content: space-between;
-        .mainmenu__link{
+        &__link{
             transition: .3s;
             font-size: 2rem;
             font-weight: 500;
@@ -43,6 +43,100 @@ html {
                     text-decoration: underline;
                 }
         }
+}
+
+.main-section { 
+    &__inner { 
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 750px;
+    }
+}
+
+
+.main-section { 
+
+    &__inner {
+        display: flex;
+        gap: 6%;
+        
+    }
+
+    &__buttons {
+        padding-top: 100px;
+        width: 100%;
+        display: flex;
+        gap: 30px;
+    }
+
+    &__images-wrap{
+        display: flex;
+        align-items: stretch;
+        position: relative;
+        height: 100%;
+        flex: 0 0 auto;
+    }
+
+    &__images {
+        max-width: none;
+        height: 100%;
+        position: absolute;
+        top:0;
+        left:0;
+    }
+
+    &__text {
+        flex: 0 1 auto;
+    }
+
+    &__befire-title {
+        font-size: 2.0rem;
+        font-weight: 400;
+        letter-spacing: 0.08rem;
+        color: $font-color-light;
+        text-transform: uppercase;
+    }
+
+    &__title { 
+        font-family: $font-heading;
+        font-size: 6.0rem;
+        color: $font-color-base;
+        padding: 40px 0 10px 0;
+    }
+
+    &__after-title {
+        font-size: 3.2rem;
+        font-weight: 400;
+        color: $font-color-light;
+        display: block;
+    }
+
+}
+
+.btn {
+    display: inline-block;
+    padding: 16px 0px;
+    font-size: 1.7rem;
+    text-transform: uppercase;
+    color: $font-color-base;
+    min-width: 176px;
+    text-align: center;
+    width: auto;
+    outline: none;
+    transition: .3s;
+        &_main {
+            background-color: $color-light;
+            border: 1px solid $color-light;
+        }
+        &_secondary {
+            border: 1px solid $font-color-base;
+        }
+        &:hover{
+            background-color: $font-color-light;
+            border-color: $font-color-light; 
+        }
+
 }
 
 
