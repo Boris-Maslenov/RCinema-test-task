@@ -11,6 +11,12 @@ html {
     color: $font-color-base;
 }
 
+.title-h2{
+    font-size: 4.6rem;
+    font-family: $font-heading;
+    font-weight: 400;
+}
+
 .container {
     width: 100%;
     max-width: 1242px;
@@ -139,7 +145,82 @@ html {
 
 }
 
+ .video-section {
+    &__inner {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        background-color: $color-middle;
+    }  
+ }
 
+ .video-loyout{
+    position: relative;
+    &__preview{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        left:0;
+    }
+    &__button{
+        position: absolute;
+        left:50%;
+        top:50%;
+        transform: translate(-50%, -50%);
+        width: 60px;
+        height: 60px;
+        background-color: $color-light; 
+        transition: 0.3s;
+            &:hover{
+                background-color: $font-color-light; ;  
+            }
+            &:before {
+                content: '';
+                position: absolute;
+                width: 17px;
+                height: 24px;
+                top: 50%;
+                left: 50%;
+                background: url(../img/icon-rect.svg) no-repeat;
+                background-size: 100%;
+                transform: translate(-50%, -50%);
+            }
+    }
+ }
+
+ .info-wrap-50 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 40px;
+    column-gap: 30px;
+ }
+
+ .text-label {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: space-between;
+        &__title {
+            font-size: 3.0rem;
+            font-weight: 600;
+            line-height: 100%
+        }
+
+        &__info {display: block;
+            padding-top: 20px;
+            font-size: 2.0rem;
+            font-weight: 400;
+            color: $font-color-light;
+        }
+ }
+
+ .info-loyout{
+    padding: 55px 30px;
+    position: relative;
+        &__title{
+            padding-bottom: 30px;
+        }
+ }
 
 // @media (min-width: 1920px) {
 // }
