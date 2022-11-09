@@ -222,5 +222,156 @@ html {
         }
  }
 
+ .location-section{
+    padding: 120px 0 130px 0;
+        &__header {
+            display: flex;
+            justify-content: space-between;
+        }
+        &__navigations{
+            padding-bottom: 30px;
+        }
+ }
+
+ .slider-button{
+    width: 57px;
+    height: 60px;
+    position: relative;
+    transition: .3s;
+    border: 1px solid $color-button-primary;
+    cursor: pointer;
+        &__icon{
+            position: absolute;
+            top:50%;
+            left:50%;
+            transform: translate(-50%, -50%);
+                path{
+                    transition: .3s;
+                    stroke: $color-button-primary;
+                }
+        }
+    &_next{
+        margin-left: 14px;
+    }
+    &_prev{
+        margin-right: 14px;
+        transform: rotate(180deg);  
+    }
+    &_active{
+        background-color: $color-button-primary;
+        .slider-button__icon {
+            path{
+                stroke: white;
+            } 
+        } 
+    }
+    &:hover{
+        background-color: $color-button-hover;
+        .slider-button__icon {
+            path{
+                stroke: white;
+            } 
+        } 
+    }
+ }
+
+ .location-slider {
+    display: flex;
+    justify-content: space-between;
+ }
+
+ .flex-line{
+    display: flex;
+    justify-content: space-between;
+ }
+
+ .location-item {
+    width: 100%;
+    max-width: 394px;
+    &__blinds {
+        position: absolute;
+        top:0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(0deg, rgba(20, 25, 35, 0.8), rgba(20, 25, 35, 0.8));
+        z-index: 2;
+        opacity: 0;
+        visibility: hidden;
+        transition: .5s;
+    }
+    &__button{
+        position: absolute;
+        top:50%;
+        left:50%;  
+        transform: translate(-50%, -50%);
+    }
+    &__bottom {
+        padding-top: 20px;
+    }
+    &__preview {
+        width: 100%;
+        height: 394px;
+        position: relative;
+            &:hover {
+                .location-item__blinds {
+                    visibility: visible;
+                    height: 100%;
+                    opacity: 1;
+                }
+            }
+    }
+    &__img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        object-fit: none;
+        z-index: 1;
+    }
+
+    &__name {
+        font-weight: 600;
+        font-size: 2.8rem;
+    }
+    &__rating{
+        display: flex;
+        justify-content: flex-end;
+    }
+    &__city {
+        font-weight: 400;
+        font-size: 2.0rem;
+        line-height: 27px;
+        letter-spacing: 0.08rem;
+        text-transform: uppercase;
+        color: $font-color-light;
+    }
+    &__price {
+        text-align: right;
+        font-weight: 400;
+        font-size: 2.0rem;
+            span {
+                color: $font-color-light; 
+            }
+    }
+ }
+
+ .rating{
+    position: relative;
+    display: inline-flex;
+    justify-content: flex-end;
+    font-weight: 600;
+    font-size: 2.0rem;
+    padding-left: 20px;
+        &:before{
+            content: '';
+            width: 16px;
+            height: 16px;
+            position: absolute;
+            left:0;
+            top:0;
+            background: url(../img/star.svg) no-repeat;
+            transform: translate(0, 50%);
+        }
+ }
+
 // @media (min-width: 1920px) {
 // }
