@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="./img/favicon.svg" type="image/x-icon">
     <title>DCinema</title>
       <!-- fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -178,7 +180,7 @@
                             <h4 class="accordion__title">How does it work?</h4>
                             <button type="button" class="accordion__button js-accordion-button"></button>
                         </div>
-                        <div class="accordion__content">
+                        <div class="accordion__content opened">
                             <p>The Private Cinema can be set up anywhere you like, be it poolside, on the lawn or even the roof terrace, provided there is an available power outlet. All films must start after sunset.</p>
                         <p>Our team of experts arrive in a fully equipped van and will advise you on the best place to setup the cinema based on our experience.</p>
                         </div>
@@ -200,7 +202,7 @@
                             <h4 class="accordion__title">How long does it takes to setup?</h4>
                             <button type="button" class="accordion__button js-accordion-button"></button>
                         </div>
-                        <div class="accordion__content" style="display: none;">
+                        <div class="accordion__content">
                             <p>The Private Cinema can be set up anywhere you like, be it poolside, on the lawn or even the roof terrace, provided there is an available power outlet. All films must start after sunset.</p>
                         <p>Our team of experts arrive in a fully equipped van and will advise you on the best place to setup the cinema based on our experience.</p>
                         </div>
@@ -213,6 +215,51 @@
         </div>
     </div>
 </div>
-
+<div class="gallery-section">
+    <div class="container">
+        <div class="gallery-section__header">
+            <div class="gallery-section__centered">
+                <h2 class="title-h2 gallery-section__title">Gallery</h2>
+                <span class="gallery-section__see-more">See more and follow us <a href="mailto:@rooftopcinema">@rooftopcinema</a></span>
+            </div>
+            <div class="gallery__navigations">
+                <button type="button" class="slider-button slider-button_prev location-section__slide-prev">
+                    <span class="slider-button__icon">
+                        <svg width="13" height="22" viewBox="0 0 13 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1 1L11 11L1 21" stroke-width="2"></path>
+                        </svg>
+                    </span>
+                </button>
+                <button type="button" class="slider-button slider-button_next location-section__slide-next slider-button_active">
+                    <span class="slider-button__icon">
+                        <svg width="13" height="22" viewBox="0 0 13 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1 1L11 11L1 21" stroke-width="2"></path>
+                        </svg>
+                    </span>
+                </button>
+            </div>
+        </div>
+            <div class="gallery-slider">
+                <div class="gallery-slider__item">
+                    <div class="gallery-slider__slide gallery-slider__big">
+                        <img src="./img/gallery-big.jpg" alt="slide" class="gallery-slider__img">
+                    </div>
+                    <div class="gallery-slider__slide">
+                        <img src="./img/gallery-default-1.jpg" alt="slide" class="gallery-slider__img">
+                    </div>
+                    <div class="gallery-slider__slide">
+                        <img src="./img/gallery-default-2.jpg" alt="slide" class="gallery-slider__img">
+                    </div>
+                    <div class="gallery-slider__slide">
+                        <img src="./img/gallery-default-3.jpg" alt="slide" class="gallery-slider__img">
+                    </div>
+                    <div class="gallery-slider__slide">
+                        <img src="./img/gallery-default-4.jpg" alt="slide" class="gallery-slider__img">
+                    </div>
+                </div>
+            </div>
+     
+    </div>
+</div>
 </body>
 </html>

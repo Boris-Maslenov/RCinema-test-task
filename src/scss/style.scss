@@ -439,9 +439,59 @@ html {
     }
  }
 
+ .gallery-section {
+    padding: 212px 0 0 0;
+        &__header{
+            display: flex;
+            justify-content: space-between;
+            padding-bottom: 50px;
+        }
+        &__title{
+            display: inline-block;
+        }
+        &__see-more {
+            padding-left: 28px;
+            font-size: 2.4rem;
+            color: $font-color-light; 
+            font-weight: 400;
+                & > a {
+                    font-weight: 600;
+                
+                    line-height: 130%;
+                    color: $font-color-base;
+                }
+        }
+        &__centered {
+            display: flex;
+            align-items: center;
+        }
+ }
 
+ .gallery-slider {
 
+    &__big{
+        grid-row: span 2;
+        position: relative;
+            .gallery-slider__img {
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                top: 0;
+                left: 0;
+                object-fit: cover;
+            }
+    }
+    
+    &__item {
+        display: grid;
+        gap: 28px;
+        grid-template-columns: 1fr 0.5fr 0.5fr;
+    }
 
+    &__slide{
+        position: relative;
+    }
+ }
 
 // @media (min-width: 1920px) {
 // }
