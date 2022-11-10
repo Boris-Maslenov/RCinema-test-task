@@ -486,11 +486,72 @@ html {
         display: grid;
         gap: 28px;
         grid-template-columns: 1fr 0.5fr 0.5fr;
+
     }
 
     &__slide{
         position: relative;
     }
+ }
+
+ .reviews-section{
+    padding: 120px 0;
+    &__inner {
+        position: relative;
+        display: flex;
+        gap:30px;
+        margin-top: 50px;
+    }
+    &__slider {
+        max-width: 500px;
+        display: flex;
+        flex-direction: column;
+        gap:30px;
+    }
+    &__navigations {
+        position: absolute;
+        top:0;
+        left: -75px;
+        display: flex;
+        flex-direction: column;
+            & > * {
+                margin: 0;
+                padding: 0;
+                transform: rotate(90deg);
+                    &:first-child {
+                        transform: rotate(-90deg);
+                    }
+            }
+    }
+    &__bg{
+        position: relative;
+    }
+    &__image {
+        max-width: none;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+ }
+
+ .slide-label {
+    background-color: $color-middle;
+    padding: 40px;
+        &__title{
+            font-weight: 600;
+            font-size: 2.8rem;
+            line-height: 130%;
+        }
+        &__description {
+            font-weight: 400;
+            font-size: 2.0rem;
+            color:$font-color-light;
+        }
+ }
+
+ .flex-line_slide-label{
+    padding-top: 10px;
  }
 
 // @media (min-width: 1920px) {
