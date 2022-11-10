@@ -668,5 +668,115 @@ html {
         }
  }
 
+ .footer {
+    &__logo {
+         flex: 0 1 auto;
+    }
+
+    &__bottom {
+        background-color: $color-middle;
+    }
+    &__inner {
+        display: flex;
+        align-items: baseline;
+        justify-content: space-between;
+        padding: 34px 0;
+    }
+    &__contacts{
+        flex: 0 1 210px;
+    }
+    &__subscription {
+        flex: 1 2 auto;
+    }
+ }
+
+ .contacts {
+    &__title {
+        font-weight: 400;
+        font-size: 2.4rem;
+        color: $font-color-light;
+        display: block;
+    }
+    &__info {
+        font-weight: 600;
+        display: block;
+        font-size: 2.2rem;
+    }
+ }
+
+ .subscription {
+    display: block;
+    position: relative;
+    width: 100%;
+    max-width: 410px;
+    height: auto;
+        &__submit {
+            position: absolute;
+            top:50%;
+            right: 5px;
+            transform: translate(0, -50%);
+        }
+        &__input {
+            display: block;
+            width: 100%;
+            height: 100%;
+            border: 2px solid  $color-button-primary;
+            font-family: $font-basic;
+            font-size: 2.0rem;
+            font-weight: 600;
+            padding: 22px 45% 22px 25px;
+            transition: 0.3s;
+                &::placeholder{
+                    color: $font-color-light;
+                    font-weight: 400;
+                }
+                &:active {
+                    border-color:  $font-color-base;
+                }
+                &:focus {
+                    border-color:  $font-color-base;
+                }
+        }
+ }
+
+ .footer__social{
+    display: flex;
+    gap:10px;
+ }
+
+ .social-link {
+    display: block;
+    position: relative;
+    width: 60px;
+    height: 60px;
+    background-color: $color-light;
+    transition: .3s;
+        &_secondary {
+            background-color: transparent; 
+        }
+        &_fb:before {
+            background-image: url(../img/fb.svg);
+        }
+        &_inst:before {
+            background-image: url(../img/inst.svg);
+        }
+        &_youtube:before {
+            background-image: url(../img/youtube.svg);
+        }
+        &:before{
+            position: absolute;
+            content: '';
+            width: 100%;
+            height: 100%;
+            background-size: auto;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+        &:hover {
+            background-color: $font-color-light;
+        }
+
+ }
+
 // @media (min-width: 1920px) {
 // }
