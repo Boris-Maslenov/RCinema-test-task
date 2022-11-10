@@ -131,6 +131,7 @@ html {
     width: auto;
     outline: none;
     transition: .3s;
+    cursor: pointer;
         &_main {
             background-color: $color-light;
             border: 1px solid $color-light;
@@ -552,6 +553,119 @@ html {
 
  .flex-line_slide-label{
     padding-top: 10px;
+ }
+
+ .feedback-section {
+        &__inner {
+            display: flex;
+            width: 100%;
+            justify-content: space-between;
+            min-height: 640px;
+        }
+        &__bg {
+            position: relative;
+            flex: 1 0 auto;
+        }
+        &__form {
+            flex: 0 0 51%;
+        }
+        &__image {
+            max-width: none;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+ }
+
+ .feedback-form {
+    background-color: $color-middle;
+    padding: 100px 70px;
+        &__title {
+            font-family: $font-heading;
+            font-weight: 400;
+            font-size: 4.8rem;
+            line-height: 4.8rem; 
+        }
+        &__inputs {
+            padding-top: 50px;
+                &  > * {
+                        font-family: $font-basic;
+                        font-size: 2.0rem;
+                        font-weight: 600;
+                        display: block;
+                        width: 100%;
+                        border: 2px solid $color-light;
+                        transition: .3s;
+                        margin-bottom: 12px;
+                        padding: 17px 0 17px 20px;
+                            &::placeholder{
+                                color: $font-color-light;
+                                font-weight: 400;
+                            }
+                            &:active {
+                                border-color:  $font-color-base;
+                            }
+                            &:focus {
+                                border-color:  $font-color-base;
+                            }
+                    }
+        }
+        &__footer {
+            display: flex;
+            justify-content: space-between;
+            gap:35px;
+                & > * {
+                    flex: 1 0 0;
+                }
+        }
+
+ }
+
+ .check{
+    position: relative;
+    display: flex;
+    gap:10px;
+    align-items: center;
+    cursor: pointer;
+
+        &__checked {
+            flex: 1 0 auto;
+            display: block;
+            position: relative;
+            width: 20px;
+            height: 20px;
+            background-color: $color-button-primary;
+            transition: 0.5s;
+        }
+
+        &__messages {
+            font-weight: 400;
+            font-size: 2.0rem;
+            line-height: 2.7rem;
+            color: $font-color-light;
+            & > a {
+                color: $font-color-base;
+                font-weight: 600;
+            }
+        }
+
+        &__input {
+            display: none;
+            &:checked {
+                &+.check__checked:before{
+                    transition: .5s;
+                    content: '';
+                    background-color: #fff;
+                    position: absolute;
+                    top:0;
+                    left:0;
+                    width: 100%;
+                    height: 100%;
+                    background: url(../img/checkbox.svg);
+                }
+            }
+        }
  }
 
 // @media (min-width: 1920px) {
