@@ -240,6 +240,7 @@ html {
     position: relative;
     transition: .3s;
     border: 1px solid $color-button-primary;
+    background-color: $color-button-primary;
     cursor: pointer;
         &__icon{
             position: absolute;
@@ -248,9 +249,26 @@ html {
             transform: translate(-50%, -50%);
                 path{
                     transition: .3s;
-                    stroke: $color-button-primary;
+                    stroke: white;
                 }
         }
+    &.swiper-button-disabled {
+        background-color: transparent;
+            .slider-button__icon {
+                path{
+                    transition: .3s;
+                    stroke: $color-button-primary;
+                }
+            }
+            &:hover {
+                background-color: transparent;
+                cursor: default;
+                path{
+                    stroke: $color-button-primary;
+                } 
+            }
+    }
+    
     &_next{
         margin-left: 14px;
     }
@@ -258,27 +276,23 @@ html {
         margin-right: 14px;
         transform: rotate(180deg);  
     }
-    &_active{
-        background-color: $color-button-primary;
-        .slider-button__icon {
-            path{
-                stroke: white;
-            } 
-        } 
-    }
-    &:hover{
+    &:hover {
         background-color: $color-button-hover;
-        .slider-button__icon {
-            path{
-                stroke: white;
-            } 
-        } 
     }
  }
 
  .location-slider {
     display: flex;
     justify-content: space-between;
+    &_oh{
+        margin-left: auto;
+        margin-right: auto;
+        position: relative;
+        overflow: hidden;
+        list-style: none;
+        padding: 0;
+        z-index: 1;
+    }
  }
 
  .flex-line{
