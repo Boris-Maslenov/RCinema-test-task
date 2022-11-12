@@ -11,6 +11,11 @@ html {
     color: $font-color-base;
 }
 
+html, body {
+    position: relative;
+    height: 100%;
+}
+
 .title-h2{
     font-size: 4.6rem;
     font-family: $font-heading;
@@ -281,18 +286,19 @@ html {
     }
  }
 
+ .slider-oh {
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    overflow: hidden;
+    list-style: none;
+    padding: 0;
+    z-index: 1;
+}
+
  .location-slider {
     display: flex;
     justify-content: space-between;
-    &_oh{
-        margin-left: auto;
-        margin-right: auto;
-        position: relative;
-        overflow: hidden;
-        list-style: none;
-        padding: 0;
-        z-index: 1;
-    }
  }
 
  .flex-line{
@@ -516,8 +522,10 @@ html {
         display: flex;
         gap:30px;
         margin-top: 50px;
+        max-height: 550px;
     }
     &__slider {
+        overflow: hidden;
         max-width: 500px;
         display: flex;
         flex-direction: column;
@@ -790,6 +798,35 @@ html {
             background-color: $font-color-light;
         }
 
+ }
+
+ .protections {
+
+    & > a:hover {
+        text-decoration: underline;
+    }
+
+    & > * {
+        font-weight: 400;
+        font-size: 2.0rem;
+        line-height: 2.7rem;
+        color: $font-color-light;
+        
+        position: relative;
+            &:not(:last-child) {
+                padding-right: 10px;
+                margin-right: 10px;
+                    &:after{
+                        position: absolute;
+                        top: 50%;
+                        right: 0;
+                        content: '';
+                        width: 0.3rem;
+                        height: 0.3rem;                     
+                        background-color: $font-color-light;
+                    }
+            }
+    }
  }
 
 // @media (min-width: 1920px) {

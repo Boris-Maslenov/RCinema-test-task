@@ -9,7 +9,8 @@ import Accordion from './modules/accordion';
 new Accordion('.accordion', '.accordion__head', '.accordion__content', 222, true).init();
 
 // init Swiper:
-const swiper = new Swiper('.location-slider', {
+const locationSlider = new Swiper('.location-slider', {
+    autoplay: true,
 modules: [Navigation],
 slidesPerView: 3,
 spaceBetween: 30,
@@ -18,3 +19,24 @@ navigation: {
     prevEl: '.location-section__slide-prev',
     },
 });
+
+const gallerySlider = new Swiper('.gallery-slider', {
+modules: [Navigation],
+slidesPerView: 1,
+navigation: {
+    nextEl: '.gallery-section__slide-next',
+    prevEl: '.gallery-section__slide-prev',
+    },
+});
+
+const reviewsSlider = new Swiper('.reviews-slider', {
+    direction: "vertical",
+    modules: [Navigation],
+    autoplay: true,
+    slidesPerView: 2,
+    spaceBetween: 30,
+    navigation: {
+        nextEl: '.reviews-section__slide-next',
+        prevEl: '.reviews-section__slide-prev',
+        },
+    });

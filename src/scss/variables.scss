@@ -1,14 +1,21 @@
-    $color-dark: #121521;
-    $color-middle: #1B213A;
-    $color-light: #40467C;
+$color-dark: #121521;
+$color-middle: #1B213A;
+$color-light: #40467C;
 
-    $font-color-light: #B2B2D3;
-    $font-color-base : #FFF;
-  
-    $font-basic: 'Darker Grotesque', sans-serif;
-    $font-heading: 'Josefin Sans', sans-serif;
+$font-color-light: #B2B2D3;
+$font-color-base : #FFF;
+
+$font-basic: 'Darker Grotesque', sans-serif;
+$font-heading: 'Josefin Sans', sans-serif;
 
 
-    $color-button-primary:#40467C;
-    $color-button-hover: #51578C;
+$color-button-primary:#40467C;
+$color-button-hover: #51578C;
+
+//grid  breakpoints
+$sm:  576px; // container = 100%
+$md: 768px; // container = 100%
+$lg: 992px; // container = 100%
+$xl: 1200px; // container = 1000px
+
    
