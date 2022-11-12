@@ -4,6 +4,7 @@ import './scss/style.scss';
 import Swiper, { Navigation } from 'swiper';
 import 'swiper/css';
 import Accordion from './modules/accordion';
+import popup from './modules/popup';
 
 //Accordion init
 new Accordion('.accordion', '.accordion__head', '.accordion__content', 222, true).init();
@@ -40,3 +41,5 @@ const reviewsSlider = new Swiper('.reviews-slider', {
         prevEl: '.reviews-section__slide-prev',
         },
     });
+// popup init
+popup('.btn_open-popup');

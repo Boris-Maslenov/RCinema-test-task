@@ -37,7 +37,7 @@
             <h1 class="main-section__title">Rooftop Cinema</h1>
             <span class="main-section__after-title">To turn your movie night <br>into an adventure</span>
             <div class="main-section__buttons">
-                <a href="#" class="btn btn_main">Book a day</a>
+                <a href="#feedback" class="btn btn_main btn_open-popup">Book a day</a>
                 <a href="#" class="btn btn_secondary">How it works</a>
             </div>
         </div>
@@ -103,7 +103,7 @@
                 <div class="location-item__preview">
                     <img class="location-item__img" src="/src/img/location-1.jpg" alt="location img">
                     <div class="location-item__blinds">
-                        <a href="#" class="btn btn_main location-item__button">Book a day</a>
+                        <a href="#feedback" class="btn btn_main location-item__button btn_open-popup">Book a day</a>
                     </div>
                 </div>
                 <div class="location-item__bottom">
@@ -507,5 +507,41 @@
         </div>
     </div>
 </footer>
+
+<div class="overlay animate__animated" style="display: none;"></div>
+<div id="feedback" class="popup animate__animated" style="display: none;">
+    <div class="popup__wrap">
+        <div class="popup__inner">
+            <div class="popup__close">
+               <a href="#">
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 0V24" stroke-width="2"/>
+                        <path d="M24 12L-6.55651e-07 12" stroke-width="2"/>
+                    </svg>
+                </a>
+            </div>
+            <div class="popup__content">
+                <div class="feedback-form feedback-section__form">
+                    <div class="feedback-form__title">Book the day</div>
+                    <span class="feedback-form__after-title">Fill out the booking form to request availability and we will get back to you with a quote.</span>
+                    <div class="feedback-form__inputs">
+                        <input type="text" placeholder="Enter your name">
+                        <input type="phone" placeholder="Enter your number">
+                        <input type="text" placeholder="Enter your email">
+                        <input type="text" placeholder="Group size">
+                    </div>
+                    <div class="feedback-form__footer">
+                        <button type="submit" class="btn btn_main">Send REQUEST</button>
+                        <label class="check">
+                            <input class="check__input" type="checkbox">
+                            <div class="check__checked"></div>
+                            <span class="check__messages">I have read and agree with the <a href="">Terms And Conditions</a></span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
 </body>
 </html>
