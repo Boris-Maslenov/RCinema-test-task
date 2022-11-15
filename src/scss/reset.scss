@@ -8,8 +8,13 @@
     - The "symbol *" part is to solve Firefox SVG sprite bug
  */
  *:where(:not(html, iframe, canvas, img, svg, video, audio):not(svg *, symbol *)) {
-    all: unset;
-    display: revert;
+     all: unset;
+     display: revert;
+}
+
+p,h1,h2,h3,h4,h4,h5,h6 {
+    padding: 0;
+    margin:0;
 }
 
 /* Preferred box-sizing value */
@@ -22,6 +27,16 @@
 /* Reapply the pointer cursor for anchor tags */
 a, button {
     cursor: revert;
+}
+
+a {
+   text-decoration: none; 
+   color: #fff;
+}
+
+button {
+    border: none;
+    outline: none;
 }
 
 /* Remove list styles (bullets/numbers) */
@@ -42,6 +57,7 @@ table {
 /* Safari - solving issue when using user-select:none on the <body> text input doesn't working */
 input, textarea {
     -webkit-user-select: auto;
+    background: transparent;
 }
 
 /* revert the 'white-space' property for textarea elements on Safari */
