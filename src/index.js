@@ -1,11 +1,10 @@
 import './index.html';
 import './scss/style.scss';
-
 import Swiper, { Navigation, Pagination } from 'swiper';
 import 'swiper/css';
-//import 'swiper/css/pagination';
 import Accordion from './modules/accordion';
 import popup from './modules/popup';
+import menu from './modules/menu';
 
 //Accordion init
 new Accordion('.accordion', '.accordion__head', '.accordion__content', 222, true).init();
@@ -86,3 +85,9 @@ const reviewsSlider = new Swiper('.reviews-slider', {
 
 // popup init
 popup('.btn_open-popup');
+
+// open mobile menu
+menu();
+
+
+
