@@ -70,10 +70,8 @@ class Accordion {
     }
   
     slideUp = (head, content) => {
-
       const paren = head.parentNode;
       paren.classList.remove('active');
-
       const button = head.querySelector('.js-accordion-button') || null;
       if(button) this.buttonAnimation(button);
       const height = window.getComputedStyle(content).height;
@@ -96,10 +94,8 @@ class Accordion {
     }
   
     slideDown = (head, content) => {
-
       const paren = head.parentNode;
       paren.classList.add('active');
-
       const button = head.querySelector('.js-accordion-button') || null;
       if(button) this.buttonAnimation(button);
       const marginTop = window.getComputedStyle(content).marginTop;

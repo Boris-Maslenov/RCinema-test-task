@@ -1,10 +1,11 @@
 const scroll = (fn, breakPoint) => {
 
+
     const header = document.querySelector('header');
     let prev = 0;
     window.addEventListener('scroll', () => {
         const scroll = document.documentElement.scrollTop;
-        if(scroll > prev && scroll > 300 && scroll < 800 ) {
+        if(scroll > prev && scroll > 300 && scroll < 800 ||  scroll < prev && scroll > 800 )  {
             header.classList.add('hidden');
         } else {
             if(header.matches('.hidden')){
