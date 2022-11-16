@@ -1585,7 +1585,10 @@ body {
     width: 100%;
     height: 100%;
     z-index: 11;
-
+    &_video .popup__inner{
+        width: 90%;
+        max-width: 900px;
+    }
     &__wrap {
         width: 100%;
         height: 100%;

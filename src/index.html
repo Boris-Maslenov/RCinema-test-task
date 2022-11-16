@@ -7,12 +7,11 @@
     <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon">
     <link rel="icon" href="./img/favicon.svg" type="image/x-icon">
     <title>DCinema</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@400;500;600&family=Josefin+Sans&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@400;500;600&family=Josefin+Sans&display=swap" rel="stylesheet">
 </head>
 <body>
-
 <header class="header burger-menu">
     <div class="container header__inner">
         <img class="logo" src="./img/logo.svg" alt="logo">
@@ -52,11 +51,11 @@
         </div>
     </div>
 </div>
-<div id="experience" class="video-section" style="">
+<div id="experience" class="video-section">
     <div class="container video-section__inner">
         <div class="video-loyout">
             <img class="video-loyout__preview" src="./img/video-layout.jpg" alt="preview">
-            <a href="#" class="video-loyout__button"></a>
+            <a href="#video" class="video-loyout__button btn_open-popup"></a>
         </div>
         <div class="info-loyout">
             <h2 class="title-h2 info-loyout__title">Open-air film experience</h2>
@@ -81,7 +80,7 @@
         </div>
     </div>
 </div>
-<div id="location" class="location-section" style="">
+<div id="location" class="location-section">
     <div class="container container_rp">
         <div class="location-section__header">
             <h2 class="title-h2">Our locations</h2>
@@ -250,7 +249,7 @@
         </div>
     </div>
 </div>
-<div id="booking-info" class="booking-section" style="">
+<div id="booking-info" class="booking-section">
     <div class="container booking-section__inner">
         <div class="booking-section__accordion">
             <h2 class="title-h2">Booking info</h2>
@@ -295,7 +294,7 @@
         </div>
     </div>
 </div>
-<div id="gallery" class="gallery-section" style="">
+<div id="gallery" class="gallery-section">
     <div class="container container_rp">
         <div class="gallery-section__header">
             <div class="gallery-section__centered">
@@ -382,7 +381,7 @@
             </div>
     </div>
 </div>
-<div id="reviews" class="reviews-section" style="">
+<div id="reviews" class="reviews-section">
     <div class="container reviews-section__container">
         <h2 class="title-h2">Customers reviews</h2>
         <div class="reviews-section__inner">
@@ -463,7 +462,7 @@
 
     </div>
 </div>
-<div class="feedback-section" style="">
+<div class="feedback-section">
     <div class="container feedback-section__container">
         <div class="feedback-section__inner">
             <div class="feedback-section__bg">
@@ -488,7 +487,7 @@
         </div>
     </div>
 </div>
-<footer id="footer" class="footer" style=""> 
+<footer id="footer" class="footer"> 
     <div class="footer__top">
         <div class="container footer__inner footer__inner_top">
             <div class="footer__logo">
@@ -554,13 +553,30 @@
                         <label class="check">
                             <input class="check__input" type="checkbox">
                             <div class="check__checked"></div>
-                            <span class="check__messages">I have read and agree with the <a href="">Terms And Conditions</a></span>
+                            <span class="check__messages">I have read and agree with the <a href="#">Terms And Conditions</a></span>
                         </label>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+</div>
+<div id="video" class="popup popup_video animate__animated" style="display: none;">
+    <div class="popup__wrap">
+        <div class="popup__close">
+            <a href="#">
+                 <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                     <path d="M12 0V24" stroke-width="2"/>
+                     <path d="M24 12L-6.55651e-07 12" stroke-width="2"/>
+                 </svg>
+             </a>
+         </div>
+        <div class="popup__inner">
+            <div class="popup__content">
+                    <div id="frame"></div>
+            </div>
+        </div>
     </div>
+</div>
 </body>
 </html>

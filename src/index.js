@@ -6,7 +6,9 @@ import Accordion from './modules/accordion';
 import popup from './modules/popup';
 import burger from './modules/burger';
 import scroll from './modules/scroll';
+import VideoPlayer from './modules/playVideo';
 
+window.addEventListener('DOMContentLoaded', () => {
 //Accordion init
 new Accordion('.accordion', '.accordion__head', '.accordion__content', 222, true).init();
 
@@ -93,6 +95,14 @@ const MobileMenu = burger();
 // scroll end hidden mobile menu
 scroll(MobileMenu, 1242);
 
+// video player
+
+const player = new VideoPlayer('#video', '.video-loyout__button');
+
+player.init();
+
+
+});
 
 
 
