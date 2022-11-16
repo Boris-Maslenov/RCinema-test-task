@@ -15,6 +15,9 @@ const menu = () => {
   };
 
   if (hamburger && menu) openmenu();
+
+  return toggleClass;
+
 };
 
 export default menu;

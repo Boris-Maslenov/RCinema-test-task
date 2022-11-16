@@ -34,7 +34,7 @@ const popup = (buttonsSelector) => {
         return scrollWidth;
     }
 
-    const popupHandler = (e) => {
+    const popupHandler = e => {
         e.preventDefault();
         const closePopup = () => {
             overlay.classList.remove(animationOverlayIn);
@@ -62,17 +62,16 @@ const popup = (buttonsSelector) => {
         popup.classList.add(`animate__${animationOpen}`);
         popup.style.display = 'block';
 
-        popup.addEventListener('click', (e) => {
-
+        popup.addEventListener('click', e => {
             const target = e.target;
-            if (target.contains(popupContent) || target.closest('.popup__close')) {
+            if (!popupContent.contains(target) || target.closest('.popup__close')) {
                 e.preventDefault();
                 closePopup();
             }
         });
     }
 
-    document.querySelectorAll(buttonsSelector).forEach(btn => btn.addEventListener('click', (e) => {
+    document.querySelectorAll(buttonsSelector).forEach(btn => btn.addEventListener('click', e => {
         e.preventDefault();
         popupHandler(e)
     }));

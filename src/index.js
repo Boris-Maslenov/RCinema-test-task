@@ -88,9 +88,11 @@ const reviewsSlider = new Swiper('.reviews-slider', {
 popup('.btn_open-popup');
 
 // open mobile menu
-menu();
+const MobileMenu = menu();
 
 // scroll
-scroll();
+scroll(MobileMenu);
+
+
 
 
