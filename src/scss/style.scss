@@ -80,6 +80,11 @@ body {
     top: 0;
     left: 0;
     z-index: 2;
+    transition: all 1s;
+
+    &.hidden{
+        top: -100%;
+    }
 
     &:after {
         content: '';

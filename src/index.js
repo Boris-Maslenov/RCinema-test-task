@@ -4,7 +4,7 @@ import Swiper, { Navigation, Pagination } from 'swiper';
 import 'swiper/css';
 import Accordion from './modules/accordion';
 import popup from './modules/popup';
-import menu from './modules/menu';
+import burger from './modules/burger';
 import scroll from './modules/scroll';
 
 //Accordion init
@@ -88,10 +88,10 @@ const reviewsSlider = new Swiper('.reviews-slider', {
 popup('.btn_open-popup');
 
 // open mobile menu
-const MobileMenu = menu();
+const MobileMenu = burger();
 
-// scroll
-scroll(MobileMenu);
+// scroll end hidden mobile menu
+scroll(MobileMenu, 1242);
 
 
 

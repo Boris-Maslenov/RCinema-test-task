@@ -1,4 +1,4 @@
-const menu = () => {
+const burger = () => {
   const hamburger = document.querySelector(".hamburger");
   const menu = document.querySelector(".main-nav");
 
@@ -20,4 +20,4 @@ const menu = () => {
 
 };
 
-export default menu;
+export default burger;
