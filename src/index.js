@@ -5,6 +5,7 @@ import 'swiper/css';
 import Accordion from './modules/accordion';
 import popup from './modules/popup';
 import menu from './modules/menu';
+import scroll from './modules/scroll';
 
 //Accordion init
 new Accordion('.accordion', '.accordion__head', '.accordion__content', 222, true).init();
@@ -89,5 +90,7 @@ popup('.btn_open-popup');
 // open mobile menu
 menu();
 
+// scroll
+scroll();
 
 

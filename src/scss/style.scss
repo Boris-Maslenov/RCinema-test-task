@@ -13,11 +13,12 @@ html {
     position: relative;
     height: 100%;
     min-width: 320px;
-
 }
 
 html,
 body {
+    padding: 0;
+    margin: 0;
     overflow-x: hidden;
 }
 
@@ -135,6 +136,8 @@ body {
         background-color: $color-middle;
         position: fixed;
         max-width: 60%;
+        height: 100%;
+        overflow: auto;
         right: 0;
         padding: 10%;
         z-index: 1;
@@ -418,7 +421,11 @@ body {
     }
 
     &_inmenu {
+        display: none;
         margin-top: 20px;
+            @media (max-width: $xl) {
+               display: inline-block;
+            }
     }
 
     &:hover {
