@@ -420,6 +420,9 @@ body {
         background-color: $color-light;
         border: 1px solid $color-light;
     }
+    &_form {
+        font-weight: 600;
+    }
 
     &_secondary {
         border: 1px solid $font-color-base;
