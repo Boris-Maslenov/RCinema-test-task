@@ -316,7 +316,7 @@ body {
     }
 
     &__images {
-        object-fit: contain;
+        object-fit: cover;
         max-width: none;
         height: 100%;
         position: absolute;
